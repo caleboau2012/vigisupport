@@ -7,19 +7,19 @@ var Index = {
         SCHOOLS : [
             {
                 name: "Obafemi Awolowo University",
-                url: "../suite",
+                url: "../crm",
                 logo: "img/OAU-logo.jpg"
             },
             {
                 name: "Ahmadu Bello University",
-                url: "../index.php",
+                url: "../abusupport",
                 logo: "img/abu_logo.png"
-            },
-            {
-                name: "Babcock University",
-                url: "../index.html",
-                logo: "img/babcock-logo.jpg"
             }
+            //{
+            //    name: "Babcock University",
+            //    url: "../edutech",
+            //    logo: "img/babcock-logo.jpg"
+            //}
         ]
     },
     init: function(){
