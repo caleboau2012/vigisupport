@@ -7,22 +7,22 @@ var Index = {
         SCHOOLS : [
             {
                 name: "Obafemi Awolowo University",
-                url: "http://localhost:3152",
+                url: "../crm",
                 logo: "img/OAU-logo.jpg"
             },
             {
                 name: "Ahmadu Bello University",
-                url: "http://localhost:6155",
+                url: "../abusupport",
                 logo: "img/abu_logo.png"
             },
             {
                 name: "AviTech",
-                url: "http://localhost:3154",
+                url: "../avisupport",
                 logo: "img/avitech.png"
             },
             {
                 name: "PowerTech",
-                url: "http://localhost:3153",
+                url: "../powertech",
                 logo: "img/powertech.png"
             }
         ]
