@@ -7,12 +7,12 @@ var Index = {
         SCHOOLS : [
             {
                 name: "Obafemi Awolowo University",
-                url: "support.edutechng.com",
+                url: "http://support.edutechng.com",
                 logo: "img/OAU-logo.jpg"
             },
             {
                 name: "Ahmadu Bello University",
-                url: "abusupport.edutechng.com",
+                url: "http://abusupport.edutechng.com",
                 logo: "img/abu_logo.png"
             },
             {
