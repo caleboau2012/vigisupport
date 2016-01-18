@@ -14,12 +14,17 @@ var Index = {
                 name: "Ahmadu Bello University",
                 url: "../abusupport",
                 logo: "img/abu_logo.png"
+            },
+            {
+                name: "AviTech",
+                url: "../avisupport",
+                logo: "img/avitech.png"
+            },
+            {
+                name: "PowerTech",
+                url: "../powertech",
+                logo: "img/powertech.png"
             }
-            //{
-            //    name: "Babcock University",
-            //    url: "../edutech",
-            //    logo: "img/babcock-logo.jpg"
-            //}
         ]
     },
     init: function(){
@@ -41,7 +46,15 @@ var Index = {
         $('.schools .column').on('click', function(){
             console.log($(this).attr('data-index'));
             Index.go($(this).attr('data-index'));
-        })
+        });
+
+        var $grid = $('.schools').masonry({
+            // options
+            itemSelector: '.column'
+        });
+        $grid.imagesLoaded().progress( function() {
+            $grid.masonry('layout');
+        });
     },
     populateSelect: function(){
         var index, HTML = "";
@@ -54,7 +67,8 @@ var Index = {
     populateSchools: function(){
         var index, HTML = "";
         for(index = 0; index < Index.CONSTANTS.SCHOOLS.length; index++){
-            HTML += '<div data-index="' + index + '" class="column">' +
+            HTML += '<div data-index="' + index + '" class="column frame">' +
+                '<span class="helper"></span>' +
                 '<img src="' + Index.CONSTANTS.SCHOOLS[index].logo + '" class="thumbnail" alt="">' +
                 '</div>'
         }
