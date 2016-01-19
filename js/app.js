@@ -67,10 +67,11 @@ var Index = {
     populateSchools: function(){
         var index, HTML = "";
         for(index = 0; index < Index.CONSTANTS.SCHOOLS.length; index++){
-            HTML += '<div data-index="' + index + '" class="column frame">' +
+            HTML += '<div data-index="' + index + '" class="column frame"><a target="_blank" href="' +
+            Index.CONSTANTS.SCHOOLS[index].url + '"> ' +
                 '<span class="helper"></span>' +
                 '<img src="' + Index.CONSTANTS.SCHOOLS[index].logo + '" class="thumbnail" alt="">' +
-                '</div>'
+                '</a></div>'
         }
         $('.schools').html(HTML);
     },
