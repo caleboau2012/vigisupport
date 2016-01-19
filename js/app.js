@@ -7,7 +7,7 @@ var Index = {
         SCHOOLS : [
             {
                 name: "Obafemi Awolowo University",
-                url: "../crm",
+                url: "../oausupport",
                 logo: "img/OAU-logo.jpg"
             },
             {
@@ -41,10 +41,10 @@ var Index = {
             if((this.value != -1)){
                 Index.go(this.value);
             }
-        })
+        });
 
         $('.schools .column').on('click', function(){
-            console.log($(this).attr('data-index'));
+            //console.log($(this).attr('data-index'));
             Index.go($(this).attr('data-index'));
         });
 
@@ -78,7 +78,7 @@ var Index = {
         var index, HTML = "";
         for(index = 0; index < Index.CONSTANTS.SCHOOLS.length; index++){
             HTML += '<iframe class="support-views support-view' + index + '" src="' +
-                Index.CONSTANTS.SCHOOLS[index].url + '"></iframe>';
+                Index.CONSTANTS.SCHOOLS[index].url + '" id="iframe'+ index + '"></iframe>';
         }
         $('.school-support-view').html(HTML);
     },
@@ -89,7 +89,6 @@ var Index = {
         $('.school-support-view').show('slow');
     },
     home: function(){
-        console.log('home');
         $('.school-support-view').hide('slow');
         $('.schools').show('slow');
     }
