@@ -37,7 +37,7 @@ var Index = {
         });
 
         $('#school').on('change', function(){
-            console.log(this.value);
+            //console.log(this.value);
             if((this.value != -1)){
                 Index.go(this.value);
             }
@@ -83,14 +83,29 @@ var Index = {
         $('.school-support-view').html(HTML);
     },
     go: function(index){
+        Index.stopFrames();
         $('.schools').hide('slow');
         $('.support-views').addClass('hide');
         $('.support-view' + index).removeClass('hide');
         $('.school-support-view').show('slow');
+        document.getElementById('iframe' + index).contentWindow.location.reload();
+        console.log('loaded frame');
     },
     home: function(){
         $('.school-support-view').hide('slow');
         $('.schools').show('slow');
+    },
+    stopFrames: function(){
+        var frames = window.frames;
+        for(var i = 0; i < frames.length; i++){
+            if (typeof (window.frames[i].stop === 'undefined')) {
+                window.frames[i].document.execCommand('Stop');
+                console.log('stopped frame');
+            } else {
+                window.frames[i].stop();
+                console.log('stopped frame');
+            }
+        }
     }
 };
 
