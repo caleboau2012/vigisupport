@@ -88,7 +88,7 @@ var Index = {
         $('.support-views').addClass('hide');
         $('.support-view' + index).removeClass('hide');
         $('.school-support-view').show('slow');
-        document.getElementById('iframe' + index).contentWindow.location.reload();
+        //document.getElementById('iframe' + index).contentWindow.location.reload();
         console.log('loaded frame');
     },
     home: function(){
