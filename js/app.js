@@ -30,7 +30,7 @@ var Index = {
     init: function(){
         Index.populateSelect();
         Index.populateSchools();
-        //Index.populateFrames();
+        Index.populateFrames();
 
         $('.title').on('click', function(){
             Index.home()
@@ -84,18 +84,13 @@ var Index = {
     },
     go: function(index){
         $('.schools').hide('slow');
-        //$('.support-views').addClass('hide');
-        Index.changeSource(index);
+        $('.support-views').addClass('hide');
+        $('.support-view' + index).removeClass('hide');
         $('.school-support-view').show('slow');
-        //$('.support-view' + index).removeClass('hide');
-        //$('.school-support-view').show('slow');
     },
     home: function(){
         $('.school-support-view').hide('slow');
         $('.schools').show('slow');
-    },
-    changeSource: function(index){
-        $('#iframe').attr('src', Index.CONSTANTS.SCHOOLS[index].url);
     }
 };
 
