@@ -70,3 +70,8 @@
     color: white;
     background-color: rgba(0, 0, 0, .5);
 }
+
+.footer .vgg-logo{
+    width: 250px;
+    margin-top: 10px;
+}
