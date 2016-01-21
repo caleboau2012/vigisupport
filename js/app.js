@@ -28,25 +28,25 @@ var Index = {
         ]
     },
     init: function(){
-        Index.populateSelect();
+        //Index.populateSelect();
         Index.populateSchools();
         //Index.populateFrames();
 
-        $('.title').on('click', function(){
-            Index.home()
-        });
+        //$('.title').on('click', function(){
+        //    Index.home()
+        //});
 
-        $('#school').on('change', function(){
-            console.log(this.value);
-            if((this.value != -1)){
-                Index.go(this.value);
-            }
-        });
+        //$('#school').on('change', function(){
+        //    console.log(this.value);
+        //    if((this.value != -1)){
+        //        Index.go(this.value);
+        //    }
+        //});
 
-        $('.schools .column').on('click', function(){
-            //console.log($(this).attr('data-index'));
-            Index.go($(this).attr('data-index'));
-        });
+        //$('.schools .column').on('click', function(){
+        //    //console.log($(this).attr('data-index'));
+        //    Index.go($(this).attr('data-index'));
+        //});
 
         var $grid = $('.schools').masonry({
             // options
