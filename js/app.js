@@ -22,7 +22,7 @@ var Index = {
             },
             {
                 name: "PowerTech",
-                url: "../powertech",
+                url: "../powercrm",
                 logo: "img/powertech.png"
             }
         ]
