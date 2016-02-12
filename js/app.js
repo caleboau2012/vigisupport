@@ -87,12 +87,14 @@ var Index = {
         //$('.support-views').addClass('hide');
         Index.changeSource(index);
         $('.school-support-view').show('slow');
+        $('.footer').hide();
         //$('.support-view' + index).removeClass('hide');
         //$('.school-support-view').show('slow');
     },
     home: function(){
         $('.school-support-view').hide('slow');
         $('.schools').show('slow');
+        $('.footer').show();
     },
     changeSource: function(index){
         $('#iframe').attr('src', Index.CONSTANTS.SCHOOLS[index].url);
